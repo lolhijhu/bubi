@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Játékok nektek</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
+    body, html {
+      margin: 0; padding: 0;
+      height: 100%;
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(270deg, #ff004f, #00ffe7, #8e00ff, #ffea00);
+      background-size: 800% 800%;
+      animation: gradientShift 15s ease infinite;
+      color: white;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+    }
+
+    @keyframes gradientShift {
+      0%{background-position:0% 50%}
+      50%{background-position:100% 50%}
+      100%{background-position:0% 50%}
+    }
+
+    header {
+      background: rgba(0,0,0,0.4);
+      padding: 15px 20px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 10px;
+      box-shadow: 0 0 15px rgba(0,0,0,0.4);
+      user-select: none;
+    }
+
+    form {
+      flex-grow: 1;
+      display: flex;
+      max-width: 700px;
+    }
+
+    input[type="text"] {
+      flex-grow: 1;
+      padding: 12px 20px;
+      border-radius: 30px 0 0 30px;
+      border: none;
+      font-size: 1.1rem;
+      outline: none;
+      box-shadow: 0 0 10px rgba(0,0,0,0.3);
+    }
+
+    button {
+      padding: 12px 25px;
+      background: #ff004f;
+      border: none;
+      border-radius: 0 30px 30px 0;
+      font-weight: 600;
+      font-size: 1.1rem;
+      color: white;
+      cursor: pointer;
+      box-shadow: 0 0 15px #ff004f;
+      transition: background 0.3s ease;
+    }
+
+    button:hover {
+      background: #e60044;
+      box-shadow: 0 0 20px #e60044;
+    }
+
+    main {
+      flex-grow: 1;
+      padding: 30px 20px;
+      max-width: 900px;
+      margin: 0 auto;
+      user-select: none;
+    }
+
+    .game-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 15px;
+      justify-content: center;
+    }
+
+    .game-links a {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      padding: 10px 20px;
+      background: rgba(0,0,0,0.3);
+      border-radius: 20px;
+      color: white;
+      font-weight: 600;
+      text-decoration: none;
+      box-shadow: 0 0 10px rgba(0,0,0,0.3);
+      transition: background 0.3s ease;
+      min-width: 140px;
+    }
+
+    .game-links a img {
+      width: 24px;
+      height: 24px;
+      border-radius: 4px;
+    }
+
+    .game-links a:hover {
+      background: rgba(255,0,79,0.7);
+      box-shadow: 0 0 15px rgba(255,0,79,0.8);
+    }
+
+    @media(max-width: 480px) {
+      header {
+        flex-direction: column;
+        gap: 10px;
+      }
+      form {
+        max-width: 100%;
+      }
+      input[type="text"], button {
+        border-radius: 30px;
+        width: 100%;
+      }
+      .game-links {
+        justify-content: center;
+      }
+      .game-links a {
+        min-width: 100%;
+        justify-content: center;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <form action="https://www.google.com/search" method="GET" target="_blank">
+      <input type="text" name="q" placeholder="Ide írd amit keresni akarsz..." autocomplete="on" required />
+      <button type="submit">Keresés</button>
+    </form>
+  </header>
+
+  <main>
+    <div class="game-links">
+      <a href="https://krunker.io" target="_blank" rel="noopener noreferrer">
+        <img src="https://krunker.io/img/favicon.png" alt="Krunker" />
+        Krunker.io
+      </a>
+      <a href="https://1v1.lol" target="_blank" rel="noopener noreferrer">
+        <img src="https://1v1.lol/images/favicon.png" alt="1v1.LOL" />
+        1v1.LOL
+      </a>
+      <a href="https://cookie-clicker2.com" target="_blank" rel="noopener noreferrer">
+        <img src="https://cookie-clicker2.com/favicon.ico" alt="Cookie Clicker" />
+        Cookie Clicker
+      </a>
+      <a href="https://bitlifeonline.com" target="_blank" rel="noopener noreferrer">
+        <img src="https://bitlifeonline.com/favicon.ico" alt="BitLife" />
+        BitLife
+      </a>
+      <a href="https://geometrydashlite.co" target="_blank" rel="noopener noreferrer">
+        <img src="https://geometrydashlite.co/favicon.ico" alt="Geometry Dash" />
+        Geometry Dash
+      </a>
+      <a href="https://retrobowl.me" target="_blank" rel="noopener noreferrer">
+        <img src="https://retrobowl.me/favicon.ico" alt="Retro Bowl" />
+        Retro Bowl
+      </a>
+      <a href="https://monkeymart.org" target="_blank" rel="noopener noreferrer">
+        <img src="https://monkeymart.org/favicon.ico" alt="Monkey Mart" />
+        Monkey Mart
+      </a>
+      <a href="https://vex7.org" target="_blank" rel="noopener noreferrer">
+        <img src="https://vex7.org/favicon.ico" alt="Vex 7" />
+        Vex 7
+      </a>
+      <a href="https://tunnelrush2.com" target="_blank" rel="noopener noreferrer">
+        <img src="https://tunnelrush2.com/favicon.ico" alt="Tunnel Rush" />
+        Tunnel Rush
+      </a>
+      <a href="https://amongus-online.net" target="_blank" rel="noopener noreferrer">
+        <img src="https://amongus-online.net/favicon.ico" alt="Among Us Online" />
+        Among Us Online
+      </a>
+    </div>
+  </main>
+</body>
+</html>
